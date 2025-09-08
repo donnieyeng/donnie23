@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Application form</title>
+</head>
+<body>
+  <main>
+    <h1>Application Form</h1>
+    <p>Please complete all required fields before submitting.</p>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+  
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="full-name">Full Name:</label><br>
+        <input type="text" id="full-name" name="full-name" required aria-required="true"/><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required aria-required="true"/><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" aria-describedby="phoneHelp"/><br>
+        <small id="phoneHelp">Format: 10 digits</small><br><br>
+
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" min="1" max="120" required/><br><br>
+
+        <p>Gender:</p>
+        <label><input type="radio" name="gender" value="male" required/> Male</label><br>
+        <label><input type="radio" name="gender" value="female"/> Female</label><br>
+        <label><input type="radio" name="gender" value="other"/> Other</label><br><br>
+
+        <label for="profile-picture">Profile Picture:</label><br>
+        <input type="file" id="profile-picture" name="profile-picture" accept="image/*"/><br><br>
+      </fieldset>
+
+    
+      <fieldset>
+        <legend>Account Details</legend>
+
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required/><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required/><br><br>
+
+        <label for="confirm-password">Confirm Password:</label><br>
+        <input type="password" id="confirm-password" name="confirm-password" required/><br><br>
+
+        <label for="acc-phone">Phone Number:</label><br>
+        <input type="tel" id="acc-phone" name="acc-phone" pattern="[0-9]{10}" aria-describedby="accPhoneHelp"/><br>
+        <small id="accPhoneHelp">Format: 10 digits</small><br><br>
+
+        <label for="acc-country">Country:</label><br>
+        <select id="acc-country" name="acc-country" required>
+          <option value="">--Select--</option>
+          <option value="usa">United States</option>
+          <option value="uk">United Kingdom</option>
+          <option value="kenya">Kenya</option>
+          
+        </select><br><br>
+      </fieldset>
+
+     
+      <fieldset>
+        <legend>Preferences</legend>
+
+        
+        <p>Preferred Contact Method:</p>
+        <label><input type="radio" name="contact-method" value="email" required/> Email</label><br>
+        <label><input type="radio" name="contact-method" value="phone"/> Phone</label><br><br>
+      </fieldset>
+
+     
+      <fieldset>
+        <legend>Confirmation</legend>
+        <label>
+          <input type="checkbox" name="terms" required/>
+          I agree to the terms and conditions
+        </label><br><br>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </main>
+</body>
+</html>
